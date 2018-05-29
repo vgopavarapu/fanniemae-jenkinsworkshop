@@ -7,7 +7,7 @@ pipeline {
       steps {
         echo '2nd time building'
         sh 'java -version'
-        echo 'Hello ${MY_NAME}'
+        echo "Hello ${MY_NAME}!"
       }
     }
   }
