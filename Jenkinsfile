@@ -3,11 +3,10 @@ pipeline {
     label 'jdk8'
   }
   stages {
-    stage('Hello World') {
+    stage('Say Hello') {
       steps {
-        echo '2nd time building'
-        sh 'java -version'
         echo "Hello ${params.Name}!"
+        sh 'java -version'
         echo "${TEST_USER_USR}"
         echo "${TEST_USER_PSW}"
       }
@@ -37,7 +36,7 @@ pipeline {
     }
   }
   environment {
-    MY_NAME = 'Venki'
+    MY_NAME = 'Mary'
     TEST_USER = credentials('test-user')
   }
   post {
