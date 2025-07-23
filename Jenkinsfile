@@ -7,8 +7,8 @@ pipeline {
       steps {
         echo "Hello ${params.Name}!"
         sh 'java -version'
-        echo "${TEST_USER_USR}"
-        echo "${TEST_USER_PSW}"
+        echo "${TEST_USER_USR} - ${TEST_USER_PSW}"
+        
       }
     }
     stage('Checkpoint') {
